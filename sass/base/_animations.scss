@@ -1,0 +1,47 @@
+/* Animations */
+@keyframes moveInLeft {
+  /* Start of animation  */
+  /* For best browser performance its best to only animate two props opacity and transform  */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  /* End of animation */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  /* Start of animation  */
+  /* For best browser performance its best to only animate two props opacity and transform  */
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  /* End of animation */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* Button translate animation coming from the bottom  */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  /* End of animation */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

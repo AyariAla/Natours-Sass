@@ -1,0 +1,9 @@
+@mixin clearfix {
+  //append a pseudo element after an element to clear
+  //    the floats to avoid the height collapse when we float elements
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
