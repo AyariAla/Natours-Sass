@@ -10,6 +10,7 @@
   background-position: top;
   /* Drawing a polygon to clip the picture defining it's 4 corner positions */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
 
   &__logo-box {
