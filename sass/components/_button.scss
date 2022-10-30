@@ -32,6 +32,16 @@
       background-color: $color-white;
     }
   }
+
+  &--green {
+    background-color: $color-primary;
+    // text color
+    color: $color-white;
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   &::after {
     /* content and display necessary so the element is displayed */
     content: '';
