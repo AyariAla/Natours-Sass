@@ -1,0 +1,72 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: $color-white;
+  border-radius: 3px;
+  padding: 6rem;
+  //this is because the circle is translated to the left
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
+
+  //the skew will not work on the img because its not a direct child so we have to skew it manually
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    // background-color: orangered;
+    // circle(radius at X Y) 50% of the width || height
+    //to make the text float around the circle
+    float: left;
+    // at 50% 50% of the div width height
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    //Drawing the circle
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    //best way to move a floated element , dont touch margin
+    //use transfor
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+  }
+  &__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    backface-visibility: hidden;
+    //to darken the image on blur
+    filter: blur(3px) brightness(80%);
+  }
+}
