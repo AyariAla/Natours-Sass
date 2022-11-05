@@ -1,4 +1,6 @@
 .btn {
+  // & only means btn
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -9,6 +11,10 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+
+    //Change to the button booking section
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -20,9 +26,14 @@
     }
   }
   /* Btn click */
+  // section books change
+  &:focus,
+    //###
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    //section books change
+    outline: none;
   }
 
   &--white {
