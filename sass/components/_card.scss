@@ -125,22 +125,30 @@
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     &--1 {
-      background-color: $color-secondary-dark;
-      opacity: 0.5;
-      //   background-image: linear-gradient(
-      //     right to bottom,
-      //     rgba($color-secondary-light, 0.8),
-      //     rgba($color-secondary-dark, 0.8)
-      //   );
+      // background-color: $color-secondary-dark;
+      // opacity: 0.5;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-secondary-light,
+        $color-secondary-dark
+      );
     }
 
     &--2 {
-      background-color: $color-primary-dark;
-      opacity: 0.5;
+      // background-color: $color-primary-dark;
+      // opacity: 0.5;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
     }
     &--3 {
-      background-color: $color-tertiary-dark;
-      opacity: 0.5;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary-light,
+        $color-tertiary-dark
+      );
     }
   }
   &__details {
