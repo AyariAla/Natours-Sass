@@ -50,7 +50,29 @@
 }
 
 .book {
-  background-image: url(../img/nat-4.jpg);
+  // background-image: url(../img/nat-4.jpg);
+  // Changing this to get the same effect as a clip mask to divide the div but here we do it
+  // in a different manner
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.8) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    // replace the transparent with orange
+    // at 0 we want white
+    // at 50 we want white
+    // since there will be no space because the gradient is supposed to start
+    // white at 50% and orange at 50% it will draw a line
+    // at 50 we want orange
+    url(../img/nat-4.jpg);
   background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
   height: 50rem;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
 }
