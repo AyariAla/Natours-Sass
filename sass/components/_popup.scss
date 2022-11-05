@@ -1,0 +1,8 @@
+.popup {
+  background-color: $color-black;
+  position: relative;
+
+  &__content {
+    @include centerHorizontalVertical;
+  }
+}
