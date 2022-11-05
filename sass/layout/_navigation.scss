@@ -1,0 +1,93 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    //the white circle button
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    border-radius: 50%;
+  }
+
+  &__background {
+    //the circle behind the while circle
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    // fixed position and takes the element out of the flow
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    z-index: 1000;
+    //circle end
+    //this is what will make the circle grow to cover the screen
+    transform: scale(80);
+  }
+
+  &__nav {
+    //the navigation element
+    //as big as the screen
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+  }
+
+  &__list {
+    @include centerHorizontalVertical;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      //the gradient trasition to get the white bg
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      //having this at 200% will have the background become the double of the elemtn thus showing only 50% of the bg
+      background-size: 220%;
+      transition: all 0.4s;
+      //fix for the padding and to the translate to work
+      display: inline-block;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+  }
+}

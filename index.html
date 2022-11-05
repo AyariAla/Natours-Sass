@@ -16,6 +16,44 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <!-- START NAVIGATION  -->
+    <div class="navigation">
+      <!-- Checkbox trick for the menu -->
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <!-- Icon placholder is label -->
+      <label for="navi-toggle" class="navigation__button"> MENU </label>
+      <!-- This will be the background -->
+      <div class="navigation__background">&nbsp;</div>
+      <!-- this is actual navigation menu -->
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">
+              <span>01</span> About natours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><span>02</span>Your benefits</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"
+              ><span>03</span>Popular tours</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>04</span>Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link"><span>05</span>Book now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- END NAVIGATION  -->
+
+    <!-- START HEADER  -->
     <header class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header__logo" />
@@ -30,8 +68,9 @@
         <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
       </div>
     </header>
+    <!-- END HEADER  -->
     <main>
-      <!-- SECTION ABOUT  -->
+      <!-- START SECTION ABOUT  -->
       <section class="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
@@ -80,7 +119,8 @@
           </div>
         </div>
       </section>
-      <!-- SECTION FEATURES  -->
+      <!-- END SECTION ABOUT  -->
+      <!-- START SECTION FEATURES  -->
       <section class="section-features">
         <div class="row">
           <div class="col-1-of-4">
@@ -133,8 +173,10 @@
           </div>
         </div>
       </section>
+      <!-- END SECTION FEATURES  -->
+
       <!-- .section.section-tours -->
-      <!-- SECTION TOURS  -->
+      <!-- START SECTION TOURS  -->
       <section class="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Most popular tours</h2>
@@ -235,7 +277,8 @@
           <a href="#" class="btn btn--green">Discover all tours</a>
         </div>
       </section>
-      <!-- SECTION STORIES  -->
+      <!-- END SECTION TOURS  -->
+      <!-- START SECTION STORIES  -->
       <section class="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
@@ -291,8 +334,8 @@
           <a href="#" class="btn-text">Read all stories &rarr;</a>
         </div>
       </section>
-
-      <!-- Booking section  -->
+      <!-- END SECTION STORIES  -->
+      <!-- START Booking section  -->
       <section class="section-book">
         <div class="row">
           <div class="book">
@@ -360,6 +403,7 @@
           </div>
         </div>
       </section>
+      <!-- END Booking section  -->
     </main>
 
     <!-- START FOOTER -->
