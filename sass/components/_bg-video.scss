@@ -1,0 +1,20 @@
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
+
+  &__content {
+    // here we make the video fit on the whole div while still maintaining the aspect ratio
+    //fill will not maintain the aspect ratio
+    //Contain it will fill the parent without the clipping so it will take it's origin size( H x W )
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //#########
+  }
+}
