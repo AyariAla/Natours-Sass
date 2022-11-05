@@ -14,6 +14,9 @@
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3 rem rgba($color-black, 0.1);
+    // for 3 lines of the icon to align
+    text-align: center;
+    cursor: pointer;
   }
 
   &__background {
@@ -111,5 +114,64 @@
     //showing the nav back
     opacity: 1;
     width: 100%;
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  // The 3 lines getting closer effect
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+  //
+
+  //making the middle line dissapear
+  &__checkbox:checked + &__button &__icon {
+    // do not touch the size or position because after and before depend on it
+    //best way to make it dissapear
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    //positionning to the middle
+    top: 0;
+    // 135deg instead of 45deg for better animation
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 }
