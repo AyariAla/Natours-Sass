@@ -9,6 +9,16 @@
 html {
   // Defining what 1 rem is
   font-size: 62.5%;
+
+  //Instead of writing
+  // @media (max-width: 600px){
+  //   font-size: 50%;
+  // }
+  // We will use a mixin
+
+  @include respond-phone {
+    font-size: 50%;
+  }
 }
 
 body {
