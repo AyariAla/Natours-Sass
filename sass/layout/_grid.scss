@@ -1,13 +1,16 @@
 .row {
   max-width: $grid-width;
-  // background-color: #eee;
-  //   how to center a block element inside a block element
-  margin: 0 auto;
-  //we want the last child to not have a margin-bottom
-  &:not(:last-child) {
-    //.row:not()
-    margin-bottom: $gutter-vertical;
+  @include respond(tab-port) {
+    max-width: 50rem;
   }
+  margin: 0 auto;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
   @include clearfix;
 
   //attribute selector
@@ -15,11 +18,17 @@
   //class*= select all classes that contain col-
   //class$= select any class that ends with col-
   [class^='col-'] {
-    // background-color: orangered;
     float: left;
-
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 
