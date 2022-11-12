@@ -195,7 +195,13 @@
   //###################################
   //###################################
 
-  @include respond(tab-port) {
+  // @include respond(tab-port) {
+  //switching to type the real media query because we need to add a condition
+  //because a user can use a tablet in landscale mode and the backface of the card won't
+  //show up because he cannot hover
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    //900px
+
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
