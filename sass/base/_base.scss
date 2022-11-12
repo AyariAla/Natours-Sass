@@ -8,7 +8,7 @@
 
 html {
   // Defining what 1 rem is
-  font-size: 162.5%; // we want a rem to be = 10px so  10px/16px = 62.5%
+  font-size: 62.5%; // we want a rem to be = 10px so  10px/16px = 62.5%
   //##################
   //Instead of writing
   // @media (max-width: 600px){
@@ -48,4 +48,9 @@ body {
   @include respond(tab-port) {
     padding: 0;
   }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
