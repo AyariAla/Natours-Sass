@@ -504,6 +504,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
+@media (max-width: 56.25em) {
+  .feature-box {
+    padding: 2rem;
+  }
+}
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
 }
@@ -514,6 +519,11 @@ body {
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
+}
+@media (max-width: 56.25em) {
+  .feature-box__icon {
+    margin-bottom: 0;
+  }
 }
 
 .form__group:not(:last-child) {
@@ -1063,7 +1073,7 @@ body {
 }
 @media (max-width: 56.25em) {
   .section-features {
-    padding: 25rem 0;
+    padding: 10rem 0;
   }
 }
 
