@@ -12,8 +12,17 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
-  //the skew will not work on the img because its not a direct child so we have to skew it manually
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-top: 7rem;
+  }
 
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
+  //the skew will not work on the img because its not a direct child so we have to skew it manually
   & > * {
     transform: skewX(12deg);
   }
@@ -35,6 +44,10 @@
     //use transfor
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
   &__img {
     height: 100%;
@@ -45,6 +58,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
