@@ -23,6 +23,10 @@
     //section 3
     transition: all 0.3s;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       //for accessibility
@@ -67,6 +71,11 @@
     width: 49%;
     //placing the two groups side by side and preventing line break with inline-block
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   &__radio-input {

@@ -4,10 +4,17 @@
   font-size: 1.4rem;
   color: $color-grey-light-1;
 
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   &__logo-box {
     // an inline element will behave like text so it will get centered
     text-align: center;
     margin-bottom: 8rem;
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__logo {
@@ -22,6 +29,11 @@
     padding-top: 2rem;
     //this will make the divider only occupy the space it needs and no go all the way to the right
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -62,5 +74,10 @@
     width: 80%;
     float: right;
     // ####
+
+    @include respond(tab-port) {
+      width: 100%;
+      float: none;
+    }
   }
 }
